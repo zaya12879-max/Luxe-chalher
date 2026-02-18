@@ -1,0 +1,58 @@
+:root { --gold: #c5a059; --dark: #000; --red-price: #b51c1c; --light-gray: #f9f9f9; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #fff; scroll-behavior: smooth; overflow-x: hidden; }
+
+/* Header & Side Menu */
+header { background: #fff; padding: 15px 5%; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+.header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+.logo { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: bold; letter-spacing: 4px; text-align: center; }
+.logo span { font-size: 10px; color: var(--gold); display: block; letter-spacing: 2px; }
+.menu-burger, .header-icons i { font-size: 18px; cursor: pointer; margin-left: 15px; }
+
+.side-menu { position: fixed; top: 0; left: -320px; width: 300px; height: 100%; background: #fff; z-index: 3000; transition: 0.4s ease; padding: 80px 40px; box-shadow: 10px 0 30px rgba(0,0,0,0.05); }
+.side-menu.active { left: 0; }
+.close-menu { position: absolute; top: 20px; right: 25px; font-size: 35px; cursor: pointer; }
+.side-menu ul { list-style: none; }
+.side-menu ul li { margin-bottom: 25px; }
+.side-menu ul li a { text-decoration: none; color: #000; font-size: 13px; letter-spacing: 2px; transition: 0.3s; }
+.side-menu ul li a:hover { color: var(--gold); padding-left: 8px; }
+
+/* Hero */
+.hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('images/hijab0.jpeg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; letter-spacing: 4px; margin-bottom: 10px; }
+.btn-discover { padding: 12px 35px; border: 1px solid #fff; color: #fff; text-decoration: none; font-size: 11px; letter-spacing: 2px; transition: 0.4s; }
+.btn-discover:hover { background: #fff; color: #000; }
+
+/* Grid */
+.gallery-section { max-width: 1300px; margin: 60px auto; padding: 0 20px; }
+.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+.product-card { cursor: pointer; text-align: center; transition: 0.3s; }
+.product-card img { width: 100%; height: 450px; object-fit: cover; }
+.product-card:hover { transform: translateY(-5px); }
+
+/* Modal & Payment Form */
+.modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: #fff; overflow-y: auto; }
+.modal-content { max-width: 1100px; margin: 40px auto; padding: 20px; position: relative; }
+.product-page-flex { display: flex; gap: 50px; flex-wrap: wrap; }
+.product-view, .product-info { flex: 1; min-width: 300px; }
+.product-view img { width: 100%; border-radius: 2px; }
+
+.payment-section { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
+.payment-methods { border: 1px solid var(--gold); padding: 10px; text-align: center; margin-bottom: 20px; font-size: 12px; color: var(--gold); font-weight: bold; }
+.card-form .input-group { margin-bottom: 15px; }
+.card-form label { display: block; font-size: 10px; margin-bottom: 5px; color: #888; text-transform: uppercase; }
+.card-form input { width: 100%; padding: 12px; border: 1px solid #ddd; font-family: 'Montserrat'; outline: none; }
+.card-form input:focus { border-color: var(--gold); }
+.flex-inputs { display: flex; gap: 10px; }
+
+.add-to-cart { width: 100%; background: #000; color: #fff; padding: 18px; border: none; font-weight: bold; cursor: pointer; letter-spacing: 2px; transition: 0.4s; }
+.add-to-cart:hover { background: var(--gold); }
+
+/* Footer */
+footer { background: #000; color: #fff; padding: 60px 5% 20px; margin-top: 80px; }
+.footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+.f-col h4 { font-size: 12px; margin-bottom: 20px; color: var(--gold); letter-spacing: 2px; }
+.f-col p { font-size: 11px; opacity: 0.6; margin-bottom: 10px; }
+
+@media (max-width: 768px) { .product-page-flex { flex-direction: column; } .footer-links { grid-template-columns: 1fr; } }
+
