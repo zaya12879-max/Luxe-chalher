@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALHER Paris | Maison de Luxe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="menu-burger" id="openMenu"><i class="fas fa-bars"></i></div>
+            <div class="logo">CHALHER <span>PARIS</span></div>
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+        
+        <nav class="side-menu" id="sideMenu">
+            <span class="close-menu" id="closeMenu">&times;</span>
+            <ul>
+                <li><a href="#">ACCUEIL</a></li>
+                <li><a href="#collection">NOTRE COLLECTION</a></li>
+                <li><a href="#">À PROPOS DE NOUS</a></li>
+                <li><a href="#">LIVRAISON & RETOURS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CHALHER PARIS</h1>
+            <p>COLLECTION RAMADAN-AÏD 2026</p>
+            <a href="#collection" class="btn-discover">VOIR LA COLLECTION</a>
+        </div>
+    </section>
+
+    <section class="reassurance">
+        <div class="re-item"><i class="fas fa-truck"></i> LIVRAISON OFFERTE</div>
+        <div class="re-item"><i class="fas fa-sync"></i> SATISFAIT OU REMBOURSÉ</div>
+        <div class="re-item"><i class="fas fa-lock"></i> PAIEMENT SÉCURISÉ</div>
+    </section>
+
+    <section id="collection" class="gallery-section">
+        <div class="grid-container" id="gallery"></div>
+    </section>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-page-flex">
+                <div class="product-view">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="product-info">
+                    <nav class="breadcrumb">CHALHER SHOP / NOUVEAUTÉS</nav>
+                    <h2 id="modalTitle">MODÈLE CHALHER</h2>
+                    <div class="stock-tag">! Derniers articles en stock</div>
+                    <p class="product-price">54,95 € <span class="ttc">TTC</span></p>
+                    
+                    <div class="personalisation-box">
+                        <h4>Personnalisation</h4>
+                        <textarea placeholder="Votre message à inscrire (optionnel)..."></textarea>
+                    </div>
+
+                    <div class="payment-section">
+                        <h4>MODE DE PAIEMENT</h4>
+                        <div class="payment-methods">
+                            <div class="pay-method active">
+                                <i class="fas fa-credit-card"></i> CARTE BANCAIRE
+                            </div>
+                        </div>
+
+                        <div id="card-form" class="card-form">
+                            <div class="input-group">
+                                <label>Nom sur la carte</label>
+                                <input type="text" id="cardName" placeholder="Mme/M. Nom">
+                            </div>
+                            <div class="input-group">
+                                <label>Numéro de carte</label>
+                                <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000">
+                            </div>
+                            <div class="flex-inputs">
+                                <div class="input-group">
+                                    <label>Expiration</label>
+                                    <input type="text" placeholder="MM/YY">
+                                </div>
+                                <div class="input-group">
+                                    <label>CVC</label>
+                                    <input type="text" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="payBtn">PAYER MAINTENANT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <div class="f-col"><h4>INFORMATIONS</h4><p>Contactez-nous</p><p>Livraison</p></div>
+            <div class="f-col"><h4>NOS LIENS</h4><p>Blog</p><p>Ramadan 2026</p></div>
+            <div class="f-col"><h4>MON COMPTE</h4><p>Mes commandes</p></div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CHALHER Paris. Luxe et Élégance.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
